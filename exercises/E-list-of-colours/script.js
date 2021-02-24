@@ -23,6 +23,7 @@ function listOfColours(colours) {
 
   // Create a `<p>` element.
   let paragraphElement = document.createElement("p");
+  paragraphElement.innerText = "Change this paragraph colour";
   content.appendChild(paragraphElement);
   
 
@@ -35,10 +36,11 @@ function listOfColours(colours) {
     
   })
 
+  // Add event listener to update the contents and colour of <p>
   selectElement.addEventListener("change", updateParagraph);
-    function updateParagraph(e) {
-      paragraphElement.innerText = `You have chosen ${e.target.value}!!`;
-      paragraphElement.style.color = e.target.value;
+    function updateParagraph(event) {
+      paragraphElement.innerText = `You have chosen ${event.target.value}!!`;
+      paragraphElement.style.color = event.target.value;
     }
     
   
