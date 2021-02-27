@@ -54,7 +54,7 @@ function highlightWords(paragraph, colours) {
     function highlight(event) {
       if (selectElement.value === 'none') {
         event.target.style.backgroundColor = 'white';
-      } else {
+        } else {
         event.target.style.backgroundColor = selectElement.value;
       }
     }
